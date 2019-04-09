@@ -4,6 +4,7 @@ package com.yaowang.springboottest.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,5 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/springboottest/user")
 public class UserController {
+    
+    
+    @RequestMapping(value = "/regist",method = RequestMethod.GET)
+    public String registUser(){
+
+        return null;
+    }
 
 }
