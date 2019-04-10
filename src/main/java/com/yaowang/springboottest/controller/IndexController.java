@@ -14,7 +14,6 @@ public class IndexController {
         return "Hello Spring Booter";
     }
 
-
     @RequestMapping(value = "/demo1/{id}",method = RequestMethod.GET)
     public String demo1(@PathVariable(name = "id") String id){
         return "id="+id;
@@ -31,9 +30,20 @@ public class IndexController {
     }
 
     @RequestMapping(path = "/demo4",method = RequestMethod.POST)
-    public String demo3(User user){
+    public String demo4(User user){
         return user.toString();
     }
+
+    @RequestMapping(path = "/demo5",method = RequestMethod.POST)
+    public String demo5(@RequestParam(name = "name") String name){
+        return name;
+    }
+
+    @RequestMapping(path = "/demo6",method = RequestMethod.POST)
+    public String demo6(@RequestPart(name = "name") String name){
+        return name;
+    }
+
 
 
 }
