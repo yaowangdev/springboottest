@@ -1,6 +1,7 @@
 package com.yaowang.springboottest.controller;
 
 
+import com.facebook.android.crypto.keychain.CryptoUtil;
 import com.yaowang.springboottest.entity.User;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +32,8 @@ public class IndexController {
 
     @RequestMapping(path = "/demo4",method = RequestMethod.POST)
     public String demo4(User user){
-        return user.toString();
+        String s = CryptoUtil.encryptText(user.toString());
+        return s;
     }
 
     @RequestMapping(path = "/demo5",method = RequestMethod.POST)

@@ -14,6 +14,7 @@ repositories {
 }
 
 dependencies {
+    implementation fileTree(dir:'libs',include:['*.jar'])
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-freemarker'
     implementation 'org.slf4j:slf4j-api'
